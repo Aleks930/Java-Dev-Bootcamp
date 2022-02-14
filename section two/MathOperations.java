@@ -30,9 +30,21 @@ public class MathOperations {
     System.out.println("Andromeda has " + (starsInAndromeda / starsInMilkyWay) + " times more stars");
     System.out.println("Snape caught the error. Furious, he divided Ron's score to: " + (testScore / bonusMarks));
 
+    System.out.println("10 is an even number, since dividing 10 by 2 has a remainder of: " + (10 % 2));
+    System.out.println("5 is an odd number, since dividing 5 by 2 has a remainder of: " + (5 % 2));
+
+    int counter = 0;
+    counter++;
+    counter++;
+    counter++;
+    System.out.println("I count: " + counter);
+    counter--;
+    counter--;
+    counter--;
+    System.out.println("I count: " + counter);
   }
 }
 
-// Originally, Fred had <result> times more sweets than George
-// Andromeda has <result> times more stars
-// Snape caught the error. Furious, he divided Ron's score to: <result>
+// 10 is an even number, since dividing 10 by 2 has a remainder of: <remainder>
+//
+// 5 is an odd number, since dividing 5 by 2 has a remainder of: <remainder>
