@@ -1,18 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-        Car nissan = new Car();
+        Car nissan = new Car("Nissan", 5000, 2020, "red");
 
-        nissan.make = "Nissan";
-        nissan.price = 5000;
-        nissan.year = 2020;
-        nissan.color = "red";
-
-        Car dodge = new Car();
-
-        dodge.make = "Dodge";
-        dodge.price = 11000;
-        dodge.year = 2019;
-        dodge.color = "blue";
+        Car dodge = new Car("Dodge", 8500, 2019, "blue");
 
         System.out.println("This " + nissan.make + " is worth $" + nissan.price + ". It was built in " + nissan.year + ". It is " + nissan.color + ".\n");
 
