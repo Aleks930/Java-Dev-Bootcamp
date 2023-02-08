@@ -1,14 +1,17 @@
 public class Main {
     public static void main(String[] args) {
-        Car nissan = new Car("Nissan", 5000, 2020, "red");
+        Car nissan = new Car("Nissan", 10000, 2020, "Green");
 
-        Car dodge = new Car("Dodge", 8500, 2019, "blue");
+        Car nissan2 = new Car(nissan);
 
-        nissan.setColor("Jet black");
-        dodge.setColor("Jet black");
+        nissan2.setColor("Yellow");
+        nissan.setColor("Orange");
+        nissan2.setColor("Blue");
+        nissan.setColor("Purple");
+        nissan2.setColor("Fuchsia");
+        nissan.setColor("Beige");
 
-        nissan.setPrice(nissan.getPrice() / 2);
-        dodge.setPrice(dodge.getPrice() / 2);
+        Car dodge = new Car("Dodge", 11000, 2019, "Blue");
 
         System.out.println("This " + nissan.getMake() + " is worth $" + nissan.getPrice() + ". It was built in " + nissan.getYear() + ". It is " + nissan.getColor() + ".\n");
 
