@@ -4,13 +4,17 @@ public class Car {
     private double price;
     private int year;
     private String color;
+    private String[] parts;
 
-    public Car(String make, double price, int year, String color) {
+
+    public Car(String make, double price, int year, String color, String[] parts) {
         this.make = make;
         this.price = price;
         this.year = year;
         this.color = color;
+        this.parts = parts;
     }
+    
 
     public Car(Car source) {
         this.make = source.make;
@@ -49,6 +53,14 @@ public class Car {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    public String[] getParts() {
+        return this.parts;
+    }
+
+    public void setParts(String[] parts) {
+        this.parts = parts;
     }
     
     public void drive() {
