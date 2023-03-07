@@ -6,20 +6,11 @@ import product.Shirt.Size;
 public class Main {
 
     public static void main(String[] args) {
-        Shirt shirt = new Shirt();
-        shirt.setSize(Size.SMALL);
-        shirt.setBrand("NIKE");
-        shirt.setPrice(49.99);
-        shirt.setColor("BLUE");
+        Shirt shirt = new Shirt(10.99, "Red", "Nike", Size.SMALL);
         shirt.fold();
         productStore(shirt);
 
-        Pants pants = new Pants();
-        pants.setWaist(32);
-        pants.setLength(32);
-        pants.setColor("BLACK");
-        pants.setPrice(79.99);
-        pants.setBrand("LEVIS");
+        Pants pants = new Pants(49.99, "Black", "Levi's", 32, 32);
         pants.fold();
         productStore(pants);
     }
