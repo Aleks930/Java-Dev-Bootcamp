@@ -1,4 +1,5 @@
 import product.Pants;
+import product.Product;
 import product.Shirt;
 import product.Shirt.Size;
 
@@ -11,6 +12,7 @@ public class Main {
         shirt.setPrice(49.99);
         shirt.setColor("BLUE");
         shirt.fold();
+        productStore(shirt);
 
         Pants pants = new Pants();
         pants.setWaist(32);
@@ -19,6 +21,12 @@ public class Main {
         pants.setPrice(79.99);
         pants.setBrand("LEVIS");
         pants.fold();
+        productStore(pants);
+    }
+
+    public static void productStore(Product product) {
+        System.out.println("Thank you for purchasing the " + product.getBrand() + " " + product.getClass().getSimpleName().toLowerCase() + ". " + "Your total comes to $" + product.getPrice() + ".");
+
     }
 
 }
