@@ -21,6 +21,7 @@ public class Shirt extends Product {
 
     @Override
     public void fold() {
+        super.fold();
         System.out.println("Lay shirt on a flat surface");
         System.out.println("Fold the shirt sideways");
         System.out.println("Bring sleeves in");
