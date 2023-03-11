@@ -2,10 +2,12 @@ import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
 
+import constants.Transaction;
 import pojo.Account;
 import pojo.Checking;
 import pojo.Credit;
 import repository.AccountRepository;
+import service.AccountService;
 import service.CheckingService;
 import service.CreditService;
 
@@ -40,5 +42,7 @@ public class Main {
         repository.deleteAccount("G4567H");
     }
 
-
+    public static void executeTransactions(AccountService accountService, String id, BigDecimal amount, Transaction transaction) {
+        
+    }
 }
