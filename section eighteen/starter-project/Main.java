@@ -25,7 +25,10 @@ public class Main {
             repository.createAccount(account);
         });
         
-        System.out.println();
+        Checking checking = (Checking)repository.retrieveAccount("A1234B");
+        checking.setBalance(checking.getBalance().add(new BigDecimal("100")));
+        repository.updateAccount(checking);
+        repository.deleteAccount("G4567H");
     }
 
 
