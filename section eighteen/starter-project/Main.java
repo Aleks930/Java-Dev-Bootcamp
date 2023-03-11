@@ -6,11 +6,16 @@ import pojo.Account;
 import pojo.Checking;
 import pojo.Credit;
 import repository.AccountRepository;
+import service.CheckingService;
+import service.CreditService;
 
 public class Main {
 
     public static void main(String[] args) {
         AccountRepository repository = new AccountRepository();
+        CheckingService checkingService = new CheckingService(repository);
+        CreditService creditService = new CreditService(repository);
+
         
         // Assume these were obtained from user input.
         List<Account> accounts = Arrays.asList(
@@ -22,7 +27,11 @@ public class Main {
         );
 
         accounts.forEach(account -> {
-            repository.createAccount(account);
+            if (account instanceof Checking) {
+                checkingService.createAccount((Checking)account);
+            } else {
+                creditService.createAccount((Credit)account);
+            }
         });
         
         Checking checking = (Checking)repository.retrieveAccount("A1234B");
